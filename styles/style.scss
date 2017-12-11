@@ -1,0 +1,162 @@
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}pre{white-space:pre-wrap;word-wrap:break-word;}q{quotes:\201C \201D \2018 \2019;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type=button],/* 1 */input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}button[disabled],input[disabled]{cursor:default;}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}body,figure{margin:0;}legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+html{
+  font-size: 62.5%;
+}
+
+body{
+  background: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.wrapper{
+  width: 70%;
+  margin: 0 auto;
+}
+.guitarContainer, .pianoContainer, .backtrackControl, .switchNewContainer{
+  display: flex;
+  justify-content: center;
+}
+
+.videoContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 0 30px 0;
+}
+
+iframe{
+  height: 315px;
+  width: 560px;
+}
+//fonts
+h1{
+  font-size: 6rem;
+  display: table;
+  margin: 0 auto;
+  border-bottom: 3px solid red;
+  font-family: 'Raleway', sans-serif;
+  color: white;
+}
+
+h2{
+  font-size: 5rem;
+  margin: 30px 0 30px 0;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  text-align: center;
+  color: white;
+}
+
+//note boxes
+.box, .box2{
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+  font-size: 1.5rem;
+}
+
+.boxSet1, .boxSet2, .boxSet3, .boxSet4, .boxSet5, .boxSet6{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+
+.boxSet1, .boxSet3, .boxSet5{
+  color: black;
+  background: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+  border: 1px solid #a18cd1;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.boxSet2, .boxSet4, .boxSet6{
+  color: black;
+  background: linear-gradient(to top, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+  border: 1px solid #fecfef;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.switchNewContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.backtrackButton{
+  padding: 20px;
+  width: 200px;
+  margin: 10px;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  border: none;
+}
+
+.switchNewButton{
+  width: 200px;
+  font-size: 1.6rem;
+  letter-spacing: 2px;
+  flex-direction: row;
+  padding: 30px 0 30px 0;
+  margin: 20px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+}
+
+footer{
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+/////////////////////MEDIA QUERIES//////////////////////////
+@media only screen and (max-width: 1197px){
+  .wrapper{ 
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 814px){
+  .box, .box2{
+    margin: 7px;
+  }
+}
+
+@media only screen and (max-width: 586px){
+  iframe{ 
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 456px){
+  .guitarContainer, .pianoContainer{
+  flex-wrap: wrap;
+  }
+}
+@media only screen and (max-width: 440px){
+.instrumentButton{ 
+    padding: 21px 0 21px 0;
+  }
+}
+
+@media only screen and (max-width: 439px){
+  h1{ 
+   font-size: 5rem;
+  }
+  
+  h2{
+    font-size: 3rem;
+  }
+}
